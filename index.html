@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+  
+/*.header button{
+  width: 300px;
+  height: 100px;
+  font-size: 40px;
+  border-radius: 60px;
+  border: 6px solid #4C4C4C;
+  background: black;
+  color: #7700FF;
+  font-weight: 900;
+  font-family: shabnam;
+  bottom: 30px
+}*/
+@font-face{
+  font-family: mesh;
+  src: url(MESHKAT.ttf)
+}
+@font-face{
+  font-family: shabnam;
+  src: url(Shabnam-Medium.ttf)
+}
+@font-face{
+  font-family: Shabnamt;
+  src: url(Shabnam-Thin.ttf)
+}
+*{
+  outline: none;
+  font-family: shabnam
+}
+body {
+  font-size: 15pt;
+  margin: 0;
+}
+.header{
+  height: 100px;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 60px
+}
+#titr{
+  font-family: mesh;
+  margin: 0;
+  font-size: 70px;
+  font-weight: 500;
+  color: white;
+}
+.sh {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 250px;
+  margin: 0 0 20px 0
+}
+input{
+  height: 50px;
+  width: 150px;
+  border-radius: .5rem;
+  background: none;
+  border: 1px #5A5A5A solid;
+  padding: 0 0 0 20px;
+  font-size: 30px;
+  margin: 0px 20px 0 0;
+  color: black;
+  transition: .3s
+}
+.c1,.c2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  margin: 20px 0 0 0;
+}
+select{
+  height: 50px;
+  width: 100px;
+  background: none;
+  border: 1px solid #5A5A5A;
+  border-radius: .5rem;
+  font-size: 20px;
+  padding: 0 10px 0 0;
+  color: black
+}
+#ok{
+  width: 280px;
+  border-radius: .5rem;
+  background: black;
+  border: 1px solid #5A5A5A;
+  padding: 0 0 0 20px;
+  font-size: 30px;
+  margin: 20px 0 0 0;
+  padding: 10px 0 10px 0;
+  font-weight: 300;
+  color: white;
+  box-shadow: 0px 10px 10px #D3D3D3
+}
+textarea{
+  display: block;
+  margin: 0 auto 10px auto;
+  border: 1px solid #5A5A5A;
+  border-radius: .5rem;
+  width: 280px
+}
+#copy,#reset{
+  display: block;
+  width: 100px;
+  height: 30px;
+  background: #7700FF;
+  border: none;
+  color: white;
+  margin: 4px auto 4px auto
+}
+
+#error{
+  display: block;
+  width: 280px;
+  font-size: 15px;
+  font-weight: 30px;
+  background: #E2E2E2;
+  color: black;
+  margin: auto;
+  text-align: center;
+  padding: 3px 0 3px 0;
+  animation: anim 1s linear infinite
+}
+@keyframes anim{
+  50%{
+    opacity: .3
+  }
+}
+input:hover{
+  border: 4px #0383FF solid
+}
+.kol{
+  filter: blur(2px)
+}
+
+.wel{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 270px;
+  background: black;
+  position: fixed;
+  z-index: 99;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: .5rem;
+  color: white;
+  padding: 0 0 0 0;
+  overflow: hidden
+}
+.wel1 p{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  font-family: shabnamt;
+  text-align: center
+}
+.wel2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  background: #7608FF;
+  width: 100%;
+  margin: 0 0 0 0;
+  border-radius: 0 0 .5rem .5rem;
+  justify-self: flex-end
+}
+</style>
+
+
+  <title>HTML</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="header">
+    <h1 id="titr">مکاس</h1>
+  </div>
+  <div id="wel" class="wel">
+    
+    <div class="wel1">
+    <p>سامانه مکاس به عنوان آخرین فعالیت درس جغرافیای۳ از طرف سینا پیرانی تقدیم به معلم گرانقدر جناب اقای روحی میشود</p>
+    </div>
+    
+    <div id="wel2" class="wel2">
+      <p>Ok</p>
+    </div>
+  </div>
+<div id="kol" class="kol">
+  <div id="error">عدد بزرگتر رو توی باکس اول بزار</div>
+
+  <div class="sh">
+    <div class="c1">
+    <input type="number" name="shahr1" id="vorodi1" value=""  placeholder="مثلا 40"/>
+    <select name="op1" id="op1">
+      <option value="1">شرقی</option>
+      <option value="2">غربی</option>
+    </select>
+    </div>
+    
+    
+    <div class="c2">
+    <input type="number" name="shahr2" id="vorodi2" value="" placeholder="مثلا 40" />
+    <select name="op2" id="op2">
+      <option value="1">شرقی</option>
+      <option value="2">غربی</option>
+    </select>
+    </div>
+    
+    <button id="ok" type="submit">محاسبه کن</button>
+  </div>
+  
+  <textarea name="" id="formola" rows="8" cols="40">فرمول توسط خود سایت تو اینجا نوشته میشه</textarea>
+  
+  <button id="copy" type="submit">کپی‌کردن‌فرمول</button>
+  <button id="reset" type="submit">محاسبه‌دوباره</button>
+</div>
+
+  <script>
+    let btn = document.getElementById("ok")
+let kol = document.getElementById("kol")
+let wel = document.getElementById("wel")
+let wel2 = document.getElementById("wel2")
+
+let formola = document.getElementById("formola")
+let copy = document.getElementById("copy")
+let reset = document.getElementById("reset")
+let vorodi1 = document.getElementById("vorodi1")
+let vorodi2 = document.getElementById("vorodi2")
+
+wel2.addEventListener("click",function(){
+  wel.style.display = "none"
+  kol.style.filter = "none"
+})
+
+
+btn.addEventListener("click",function(){
+  let op1= document.getElementById("op1")
+  let op1Value = op1.options[op1.selectedIndex].value
+  let op2 = document.getElementById("op2")
+  let op2Value = op2.options[op2.selectedIndex].value
+  
+  
+  if(op1Value == 1 && op2Value == 1 || op1Value == 2 && op2Value == 2){
+  let vorodi1f = Number(vorodi1.value)
+  let vorodi2f = Number(vorodi2.value)
+    
+  let jam = vorodi1f - vorodi2f;
+  let adadSahih = Math.trunc(jam/15)
+  let baghi = jam % 15;
+  let baghiTabdil = baghi*4;
+  let ekhtelaf = adadSahih +":"+ baghiTabdil
+    
+  formola.textContent = `${vorodi1f} - ${vorodi2f} = ${jam}
+  Saat = ${jam} ÷ 15 = ${adadSahih}
+  baghimande = ${baghi}
+  daghighe = ${baghi} × 4 = ${baghiTabdil}
+  EKHTELAF = ${ekhtelaf}`
+  ok.textContent = ekhtelaf
+  }else if(op1Value == 1 && op2Value == 2 || op1Value == 2 && op2Value == 1) {
+    let vorodi1f = Number(vorodi1.value)
+    let vorodi2f = Number(vorodi2.value)
+  
+  
+    let jam = vorodi1f + vorodi2f;
+    let adadSahih = Math.trunc(jam / 15)
+    let baghi = jam % 15;
+    let baghiTabdil = baghi * 4;
+    let ekhtelaf = adadSahih + ":" + baghiTabdil
+    
+    formola.textContent = `${vorodi1f} + ${vorodi2f} = ${jam}
+      Saat = ${jam} ÷ 15 = ${adadSahih}
+      baghimande = ${baghi}
+      daghighe = ${baghi} × 4 = ${baghiTabdil}
+      EKHTELAF = ${ekhtelaf}`
+    ok.textContent = "=" + ekhtelaf
+  }
+})
+
+copy.addEventListener("click",function(){
+  formola.select()
+  formola.setSelectionRange(0,9999)
+  document.execCommand("copy")
+  alert("کپی شد")
+})
+
+reset.addEventListener("click",function(){
+  vorodi1.value = ""
+  vorodi2.value = ""
+  formola.textContent = ""
+  ok.textContent = "محاسبه کن"
+})
+  </script>
+</body>
+</html>
